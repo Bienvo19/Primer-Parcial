@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<style>
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1d1f21;
+  color: #dfe6e9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  animation: background-glow 5s infinite alternate;
+}
+
+@keyframes background-glow {
+  from {
+    background-color: #1d1f21;
+  }
+  to {
+    background-color: #2c3e50;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 20px;
+  color: #f39c12;
+  text-shadow: 2px 2px 10px rgba(255, 165, 0, 0.8), 4px 4px 20px rgba(255, 255, 255, 0.3);
+  text-align: center;
+  animation: text-glow 2s infinite alternate;
+}
+
+@keyframes text-glow {
+  from {
+    text-shadow: 2px 2px 10px rgba(255, 165, 0, 0.5), 4px 4px 20px rgba(255, 255, 255, 0.2);
+  }
+  to {
+    text-shadow: 2px 2px 20px rgba(255, 255, 255, 1), 6px 6px 40px rgba(255, 255, 255, 0.7);
+  }
+}
+
+p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+p:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo del enlace */
+a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #f39c12;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  background-color: #e67e22;
+  transform: scale(1.1);
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  a {
+    padding: 10px 18px;
+    font-size: 1rem;
+  }
+}
+
+/* Estilo del título */
+h {
+  font-size: 2.8rem;
+  color: #f39c12;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 15px #f39c12, 4px 4px 25px rgba(255, 165, 0, 0.8);
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 2px 2px 15px #f39c12, 4px 4px 15px rgba(255, 255, 255, 0.2);
+  }
+  to {
+    text-shadow: 2px 2px 25px #fff, 6px 6px 45px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Estilo de la tabla */
+table {
+  width: 90%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+table:hover {
+  box-shadow: 0 0 30px rgba(255, 165, 0, 0.8);
+}
+
+thead {
+  background-color: #f39c12;
+  animation: color-flash 3s infinite alternate;
+}
+
+@keyframes color-flash {
+  from {
+    background-color: #f39c12;
+  }
+  to {
+    background-color: #e67e22;
+  }
+}
+
+th {
+  font-size: 1.3rem;
+  padding: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  border-right: 1px solid #1d1f21;
+}
+
+th:last-child {
+  border-right: none;
+}
+
+tbody tr {
+  background-color: #2c3e50;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #34495e;
+}
+
+tbody tr:hover {
+  background-color: #f39c12;
+  color: #fff;
+  transform: scale(1.02);
+}
+
+td {
+  padding: 20px;
+  text-align: center;
+  border-right: 1px solid #1d1f21;
+}
+
+td:last-child {
+  border-right: none;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #f39c12;
+  margin: 10px 0;
+  opacity: 0.8;
+}
+
+/* Estilo del botón */
+.btn-gantel {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #f39c12;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 10px 25px rgba(255, 165, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+.btn-gantel:hover {
+  background-color: #e67e22;
+  box-shadow: 0 15px 35px rgba(255, 165, 0, 0.8);
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+<body>
+  <h1>Sistema solar</h1>
+  <p> El sistema solar es el sistema planetario que liga gravitacionalmente a un conjunto de objetos astronómicos que giran directa o indirectamente en una órbita alrededor de una única estrella conocida con el nombre de Sol.
+La estrella concentra el 99,86 % de la masa del sistema solar, y la mayor parte de la masa restante se concentra en ocho planetas cuyas órbitas son prácticamente circulares y transitan dentro de un disco casi llano llamado plano eclíptico. Los cuatro planetas más cercanos, considerablemente más pequeños, Mercurio, Venus, Tierra y Marte, también conocidos como los planetas terrestres, están compuestos principalmente por roca y metal. Mientras que los cuatro más alejados, denominados gigantes gaseosos o «planetas jovianos», más masivos que los terrestres, están compuestos de hielo y gases. Los dos más grandes, Júpiter y Saturno, están compuestos principalmente de helio e hidrógeno. Urano y Neptuno, denominados gigantes helados, están formados mayoritariamente por agua congelada, amoniaco y metano.
+  </p>
+  <script src="script.js"></script>
+
+ 
+</body>
+</html>

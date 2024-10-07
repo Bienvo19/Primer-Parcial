@@ -27,4 +27,4 @@ name: Install Surge
       
 name: Deploy to Surge
       run: |
-        surge ./src https://kelvin-bienve.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        surge ./src kelvin-bienve.surge.sh --token ${{ secrets.SURGE_TOKEN }}
